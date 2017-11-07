@@ -26,6 +26,8 @@ Pod::Spec.new do |s|
   
   s.private_header_files = "include/zbar/**.h"
   
+  s.header_dir = "include"
+  
   s.header_mappings_dir = "include"
 
   s.frameworks = "AVFoundation", "CoreGraphics", "CoreMedia", "CoreVideo", "QuartzCore"
