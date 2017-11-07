@@ -35,11 +35,4 @@ Pod::Spec.new do |s|
   s.requires_arc = false
 
   s.compiler_flags = "-w -Wno-documentation-deprecated-sync"
-  
-  s.xcconfig = {
-    'USE_HEADERMAP' => 'NO',
-    'USER_HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/ZBarSDK/include/zbar"',
-    'HEADER_SEARCH_PATHS' => '"$(PODS_ROOT)/Target Support Files/ZbarSDK"',
-    'ALWAYS_SEARCH_USER_PATHS' => 'NO'
-}  
 end
