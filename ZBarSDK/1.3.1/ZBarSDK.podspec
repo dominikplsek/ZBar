@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
 
   s.source_files  = "include/zbar.h", "include/zbar/**.h"
 
-  s.header_mappings_dir = "include/zbar"
+  s.preserve_paths = "include/zbar"
   
   s.public_header_files = "include/*.h"
 
