@@ -21,12 +21,12 @@ Pod::Spec.new do |s|
 
 
   s.source_files  = "include/zbar.h", "include/zbar/**.h"
- 
-  s.header_mappings_dir = 'include/'
+   
+  s.header_dir = 'include'
   
-  s.header_dir = 'include/zbar'
+  s.preserve_path = "include/*"
   
-  s.public_header_files = "include/zbar.h"
+  s.public_header_files = "include/*.h"
 
   s.frameworks = "AVFoundation", "CoreGraphics", "CoreMedia", "CoreVideo", "QuartzCore"
 
