@@ -20,14 +20,19 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/ZBar/ZBar.git", :branch => "master" }
 
 
-  s.source_files  = "include/zbar.h", "include/zbar/**.h"
+  s.source_files  = "include/zbar.h", "include/zbar/**.h", "iphone/config.h", "zbar/{config,decoder,error,image,img_scanner,refcnt,scanner,symbol}.{h, c}",
+"zbar/decoder/{codabar,code39,code93,code128,databar,ean,i25,qr_finder}.{h, c}",
+"zbar/qrcode/*.{h, c}"
        
-  s.preserve_paths = "iphone/include/config.h", "iphone/include/config.h", "zbar/{config,decoder,error,image,img_scanner,refcnt,scanner,symbol}.c",
-"zbar/decoder/{codabar,code39,code93,code128,databar,ean,i25,qr_finder}.c",
-"zbar/qrcode/*.c"
-  s.public_header_files = "include/*.h", "include/zbar/**.h", 
+  s.private_header_files = "iphone/config.h", "zbar/{config,decoder,error,image,img_scanner,refcnt,scanner,symbol}.h",
+"zbar/decoder/{codabar,code39,code93,code128,databar,ean,i25,qr_finder}.h",
+"zbar/qrcode/*.h"
+
+  s.public_header_files = "include/*.h", "include/zbar/**.h"
+     
+  s.header_dir = './'
    
-  s.header_mappings_dir = "include"
+  #s.header_mappings_dir = "include"
 
   s.frameworks = "AVFoundation", "CoreGraphics", "CoreMedia", "CoreVideo", "QuartzCore"
 
