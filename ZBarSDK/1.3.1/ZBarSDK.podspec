@@ -22,8 +22,11 @@ Pod::Spec.new do |s|
 
   s.source_files  = "include/zbar.h", "include/zbar/**.h"
        
-  s.public_header_files = "include/*.h", "include/zbar/**.h"
-      
+  s.preserve_paths = "iphone/include/config.h", "iphone/include/config.h", "zbar/{config,decoder,error,image,img_scanner,refcnt,scanner,symbol}.c",
+"zbar/decoder/{codabar,code39,code93,code128,databar,ean,i25,qr_finder}.c",
+"zbar/qrcode/*.c"
+  s.public_header_files = "include/*.h", "include/zbar/**.h", 
+   
   s.header_mappings_dir = "include"
 
   s.frameworks = "AVFoundation", "CoreGraphics", "CoreMedia", "CoreVideo", "QuartzCore"
