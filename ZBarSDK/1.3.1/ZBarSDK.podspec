@@ -20,13 +20,11 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/ZBar/ZBar.git", :branch => "master" }
 
 
-  s.source_files  = "include/zbar.h"
+  s.source_files  = "include/zbar.h", "include/zbar/**.h"
+ 
+  s.header_mappings_dir = 'include'
   
   s.public_header_files = "include/*.h"
-  
-  s.subspec 'zbar' do |zs|    
-    zs.source_files = "include/zbar/**.h"
-  end
 
   s.frameworks = "AVFoundation", "CoreGraphics", "CoreMedia", "CoreVideo", "QuartzCore"
 
