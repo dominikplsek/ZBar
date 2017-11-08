@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
   s.source_files  = "zbar.h", "zbar/**.h"
 
-  s.public_header_files = "*.h", "zbar/**.h"
+  s.public_header_files = "zbar.h", "zbar/**.h"
   
   s.header_mappings_dir = "zbar"
   
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   s.frameworks = "AVFoundation", "CoreGraphics", "CoreMedia", "CoreVideo", "QuartzCore"
 
   s.library   = "iconv"
-
+ 
   s.requires_arc = false
 
 end
