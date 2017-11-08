@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
 
   s.public_header_files = "zbar.h", "zbar/**.h"
   
-  s.header_mappings_dir = "zbar"
+  s.header_mappings_dir = ""
   
   s.vendored_libraries = "libzbar.0.dylib"
 
